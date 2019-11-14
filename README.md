@@ -30,8 +30,15 @@ Irish Weather Data from Ireland's [Weather Observing Stations](https://www.met.i
 
 See also, [major weather events](https://www.met.ie/climate/major-weather-events), which in 2017 included [Storm Opelia](https://en.wikipedia.org/wiki/Hurricane_Ophelia_(2017))
 
+### Author Information
 
-#### Acknowledgement
+- Author: Jim Duggan
+- Affiliations
+  + [School of Computer Science, NUI Galway.](https://www.nuigalway.ie/engineering-informatics/information-technology/)
+  + [Ryan Institute, NUI Galway.](http://www.nuigalway.ie/ryaninstitute/)
+  + [Insight Centre for Data Analytics, NUI Galway.](https://www.insight-centre.org)
+
+### Acknowledgement
 
 - Copyright Met Éireann
 - Source [www.met.ie](http://www.met.ie)
