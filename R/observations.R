@@ -1,4 +1,4 @@
-#' Met Eireann - Weather Observing Stations Records 2016-2018
+#' Met Eireann - Weather Observing Stations Records 01-Jan-2017 to 31-Dec-2017
 #'
 #'
 #' @format
@@ -22,5 +22,8 @@
 #' }
 #' @source \url{https://www.met.ie}
 "observations"
+
+#' @importFrom tibble tibble
+NULL
 
 

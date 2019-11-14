@@ -1,10 +1,33 @@
 # aimsir17
 Irish Weather Data from Ireland's [Weather Observing Stations](https://www.met.ie/climate/weather-observing-stations) in 2017. Hourly records from January-December based on the following weather observation stations:
 
+
 - [Athenry, Co. Galway](https://www.met.ie/weather-forecast/athenry-weather-station-galway)
 - [Ballyhaise, Co. Cavan](https://www.met.ie/weather-forecast/ballyhaise-weather-station-cavan)
 - Belmullet, Co. Mayo
-- Carlow Oakpark, Co. Carlow
+- Casement Aerodrome, Co. Dublin
+- Claremorris, Co. Mayo
+- Cork Airport
+- Dublin Airport
+- Dunsany (Grange)
+- Finner Camp
+- Gurteen
+- Johnstown Castle
+- Knock Airport
+- Mace Head
+- Malin Head
+- Markree Castle
+- Moore Park
+- Mount Dillon
+- Mullingar
+- Newport Furnace
+- Oak Park
+- Phoenix Park
+- Roches point SWS.
+- Shannon Airport
+- Sherkin Island
+- Valentia Observatory
+
 
 
 See also, [major weather events](https://www.met.ie/climate/major-weather-events), which in 2017 included [Storm Opelia](https://en.wikipedia.org/wiki/Hurricane_Ophelia_(2017))

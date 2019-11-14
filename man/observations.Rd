@@ -3,7 +3,7 @@
 \docType{data}
 \name{observations}
 \alias{observations}
-\title{Met Eireann - Weather Observing Stations Records 2016-2018}
+\title{Met Eireann - Weather Observing Stations Records 01-Jan-2017 to 31-Dec-2017}
 \format{\describe{
 \item{date}{Date and Time (utc).}
 \item{rain}{Precipitation Amount (mm).}
@@ -29,6 +29,6 @@ The column date transformed to a `POSIXct` type}
 observations
 }
 \description{
-Met Eireann - Weather Observing Stations Records 2016-2018
+Met Eireann - Weather Observing Stations Records 01-Jan-2017 to 31-Dec-2017
 }
 \keyword{datasets}

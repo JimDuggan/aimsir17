@@ -3,13 +3,12 @@
 \docType{data}
 \name{stations}
 \alias{stations}
-\title{Summary of weather observing stations data sets}
+\title{Summary of weather observing stations with observations}
 \format{\describe{
 \item{station}{Name of the Weather Observing Station}
 \item{height}{Height above sea level (M)}
 \item{latitude}{Latitude of weather station}
 \item{longitude}{Longitude of weather station}
-\item{wetb}{Wet Bulb Temperature (C)}
 \item{Copyright}{Met Eireann}
 \item{Licence Statement}{This data is published under a Creative Commons Attribution 4.0 International (CC BY 4.0).
 https://creativecommons.org/licenses/by/4.0/}
@@ -25,6 +24,6 @@ Date formatted to R data object format using package lubridate}
 stations
 }
 \description{
-Summary of weather observing stations data sets
+Summary of weather observing stations with observations
 }
 \keyword{datasets}
