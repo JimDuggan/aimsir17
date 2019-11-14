@@ -1,14 +1,16 @@
 Package: aimsir17
-Title: Collection of datasets from Met Eireann's Weather Stations for 2017
-Version: 0.0.0.9000
+Title: Irish Weather Observing Stations Hourly Records for 2017
+Version: 0.0.1
 Authors@R: 
     person(given = "Jim",
            family = "Duggan",
            role = c("aut", "cre"),
            email = "jim.duggan@nuigalway.ie",
            comment = c(ORCID = "0000-0002-7507-8617"))
-Description: Named after the Irish name for weather (aimsir), this package contains tidied data from the Met Eireann weather stations,
-    with observations recorded every hour for 2017.
+Description: Named after the Irish name for weather, this package contains 
+    tidied data from the Irish Meteorological Service's hourly observations for 2017. 
+    In all, the data sets include observations from 25 weather stations, and also
+    latitude and longitude coordinates for each weather station.
 License:  Creative Commons Attribution 4.0 International License
 Depends: R (>= 2.10)
 Suggests: 
