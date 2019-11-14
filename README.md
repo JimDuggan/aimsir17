@@ -28,7 +28,7 @@ Irish Weather Data from Ireland's [Weather Observing Stations](https://www.met.i
 - Sherkin Island, Co. Cork
 - Valentia Observatory, Co. Kerry
 
-See also, [major weather events](https://www.met.ie/climate/major-weather-events), which in 2017 included [Storm Opelia](https://en.wikipedia.org/wiki/Hurricane_Ophelia_(2017))
+See also, [major weather events](https://www.met.ie/climate/major-weather-events), which in 2017 including [Storm Opelia](https://en.wikipedia.org/wiki/Hurricane_Ophelia_(2017)) (October 9, 2017 – October 18, 2017)
 
 ### Author Information
 
