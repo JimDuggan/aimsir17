@@ -1,0 +1,17 @@
+Package: aimsir17
+Title: Collection of datasets from Met Eireann's Weather Stations for 2017
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Jim",
+           family = "Duggan",
+           role = c("aut", "cre"),
+           email = "jim.duggan@nuigalway.ie",
+           comment = c(ORCID = "0000-0002-7507-8617"))
+Description: Named after the Irish name for weather (aimsir), this package contains tidied data from the Met Eireann weather stations,
+    with observations recorded every hour for 2017.
+License: Met Eireann Creative Commons Attribution Licence Notice 08/01/18
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/JimDuggan/aimsir,
+    https://www.met.ie
+RoxygenNote: 6.1.1
