@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-The data set can be explored for specific events. For example, on October 16th 2018, Storm Ophelia landed in Ireland. We can analyse this data using **dplyr** and **ggplot2**. First, we load the libraries.
+The data set can be explored for specific events. For example, on October 16th 2017, Storm Ophelia landed in Ireland. We can analyse this data using **dplyr** and **ggplot2**. First, we load the libraries.
 
 ```{r,echo=T,message=FALSE}
 library(aimsir17)
@@ -20,14 +20,37 @@ Next, we filter the observations for this date.
 
 ```{r,echo=T}
 o <- observations %>%
-  filter(date>"2017-10-16", date <"2017-10-17")
+  filter(month==10, day==16)
 o
 ```
 
-Next, we can take the stations that had the lowest atmospheric pressure (say 5 lowest)
+Next, we can take a selection of stations that had the lowest atmospheric pressure.
 
 ```{r,echo=T}
-lowest <- o %>% arrange(msl) %>% slice(1:5) %>% pull(station)
+lowest <- o %>% arrange(msl) %>% 
+  slice(1:6) %>% 
+  pull(station) %>%
+  unique()
 lowest
 ```
 
+This is then visualised using ggplot2
+```{r,echo=T,fig.width=10, fig.height=6}
+ggplot(filter(o,station %in% lowest),aes(x=date,y=msl,colour=station))+
+  geom_point()+geom_line()
+```
+
+
+The stations with the highest windspeed can be found
+```{r,echo=T}
+highest<- o %>% arrange(desc(wdsp)) %>% 
+  slice(1:6) %>% 
+  pull(station) %>%
+  unique()
+highest
+```
+
+```{r,echo=T,fig.width=10, fig.height=6}
+ggplot(filter(o,station %in% highest),aes(x=date,y=wdsp,colour=station))+
+  geom_point()+geom_line()
+```
