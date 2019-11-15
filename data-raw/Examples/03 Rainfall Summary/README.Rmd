@@ -1,0 +1,50 @@
+---
+output: github_document
+title:  Example 3 - Summarising Rainfall Data
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+R tools such as **dplyr** and **tidyr** can be used to summarise data (e.g. add rain observations to obtain monthly and annual cumulative amounts). The three libraries are first loaded.
+
+```{r,echo=T,message=FALSE}
+library(aimsir17)
+library(dplyr)
+library(tidyr)
+```
+
+Next, we show the overall data set (219,000 observations)
+
+```{r,echo=T}
+observations
+```
+
+We can confirm the number of records gathered for each month, and show these
+```{r,echo=T}
+observations %>% 
+  group_by(station, month) %>%
+  summarise(TotalObservations=n()) %>%
+  pivot_wider(names_from = month,values_from = TotalObservations) %>%
+  print(n=25)
+```
+
+We can also confirm the number of missing rainfall values for each month.
+```{r,echo=T}
+observations %>% 
+  group_by(station, month) %>%
+  summarise(TotalMissing=sum(is.na(rain))) %>%
+  pivot_wider(names_from = month,values_from = TotalMissing) %>%
+  print(n=25)
+```
+
+Finally, we can sum all the rainfall values for each month
+```{r,echo=T}
+observations %>% 
+  group_by(station, month) %>%
+  summarise(TotalRainfall=sum(rain,na.rm = T)) %>%
+  pivot_wider(names_from = month,values_from = TotalRainfall) %>%
+  print(n=25)
+```
+

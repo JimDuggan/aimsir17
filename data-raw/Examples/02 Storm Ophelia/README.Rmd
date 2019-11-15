@@ -41,7 +41,7 @@ ggplot(filter(o,station %in% lowest),aes(x=date,y=msl,colour=station))+
 ```
 
 
-The stations with the highest windspeed can be found
+The stations with the highest mean hourly windspeed can be found
 ```{r,echo=T}
 highest<- o %>% arrange(desc(wdsp)) %>% 
   slice(1:6) %>% 

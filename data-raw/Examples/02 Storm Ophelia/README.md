@@ -58,7 +58,7 @@ ggplot(filter(o,station %in% lowest),aes(x=date,y=msl,colour=station))+
 
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-The stations with the highest windspeed can be found
+The stations with the highest mean hourly windspeed can be found
 
 ``` r
 highest<- o %>% arrange(desc(wdsp)) %>% 
