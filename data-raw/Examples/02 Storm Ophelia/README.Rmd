@@ -1,0 +1,33 @@
+---
+output: github_document
+title:  Example 2 - Exploring Storm Ophelia
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+The data set can be explored for specific events. For example, on October 16th 2018, Storm Ophelia landed in Ireland. We can analyse this data using **dplyr** and **ggplot2**. First, we load the libraries.
+
+```{r,echo=T,message=FALSE}
+library(aimsir17)
+library(dplyr)
+library(ggplot2)
+```
+
+Next, we filter the observations for this date.
+
+
+```{r,echo=T}
+o <- observations %>%
+  filter(date>"2017-10-16", date <"2017-10-17")
+o
+```
+
+Next, we can take the stations that had the lowest atmospheric pressure (say 5 lowest)
+
+```{r,echo=T}
+lowest <- o %>% arrange(msl) %>% slice(1:5) %>% pull(station)
+lowest
+```
+
