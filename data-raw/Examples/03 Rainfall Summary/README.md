@@ -117,7 +117,7 @@ observations %>%
     ## 25 VALENT…     0     0     0     0     0     0     0     0     0     0
     ## # … with 2 more variables: `11` <int>, `12` <int>
 
-Finally, we can sum all the rainfall values for each month
+We can sum all the rainfall values for each station by each month
 
 ``` r
 observations %>% 
@@ -157,3 +157,70 @@ observations %>%
     ## 24 Sherki…  67.6  78.5 133.   14.6  39.2 109.   89.9  78.6 151.  112. 
     ## 25 VALENT… 169.  139.  135.   51.4  76.3 143   108.  103.  204.  162. 
     ## # … with 2 more variables: `11` <dbl>, `12` <dbl>
+
+Order the months from driest to wettest
+
+``` r
+observations %>% 
+  group_by(month) %>%
+  summarise(TotalRainfall=sum(rain,na.rm = T)) %>%
+  arrange(TotalRainfall) %>%
+  print(n=12)
+```
+
+    ## # A tibble: 12 x 2
+    ##    month TotalRainfall
+    ##    <dbl>         <dbl>
+    ##  1     4          506.
+    ##  2     1         1466.
+    ##  3     5         1543.
+    ##  4     2         2079.
+    ##  5     7         2216.
+    ##  6    11         2409 
+    ##  7     6         2440.
+    ##  8     8         2536 
+    ##  9    10         2648 
+    ## 10     3         2754.
+    ## 11    12         3098.
+    ## 12     9         3151.
+
+Finally, order the weather stations from driest to wettest, with an
+index value where 100 is the wettest for 2017 (Newport\!)
+
+``` r
+observations %>% 
+  group_by(station) %>%
+  summarise(TotalRainfall=sum(rain,na.rm = T)) %>%
+  arrange(TotalRainfall) %>%
+  mutate(Index=100*TotalRainfall/max(TotalRainfall)) %>%
+  print(n=25)
+```
+
+    ## # A tibble: 25 x 3
+    ##    station              TotalRainfall Index
+    ##    <chr>                        <dbl> <dbl>
+    ##  1 DUBLIN AIRPORT                662.  37.8
+    ##  2 CASEMENT                      705.  40.2
+    ##  3 PHOENIX PARK                  732   41.8
+    ##  4 OAK PARK                      759.  43.3
+    ##  5 DUNSANY                       810.  46.2
+    ##  6 BALLYHAISE                    952.  54.4
+    ##  7 MULLINGAR                     952.  54.4
+    ##  8 JOHNSTOWNII                   963   55.0
+    ##  9 GURTEEN                       983.  56.1
+    ## 10 MT DILLON                     992.  56.6
+    ## 11 ROCHES POINT                 1013.  57.8
+    ## 12 MOORE PARK                   1016.  58.0
+    ## 13 SHANNON AIRPORT              1069.  61.0
+    ## 14 SherkinIsland                1072.  61.2
+    ## 15 MACE HEAD                    1114.  63.6
+    ## 16 MALIN HEAD                   1147.  65.5
+    ## 17 CORK AIRPORT                 1162.  66.3
+    ## 18 MARKREE                      1182.  67.5
+    ## 19 ATHENRY                      1199.  68.5
+    ## 20 CLAREMORRIS                  1204   68.7
+    ## 21 FINNER                       1222.  69.7
+    ## 22 BELMULLET                    1243.  71.0
+    ## 23 KNOCK AIRPORT                1343.  76.7
+    ## 24 VALENTIA OBSERVATORY         1598.  91.2
+    ## 25 NEWPORT                      1752. 100

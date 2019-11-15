@@ -30,6 +30,16 @@ Irish Weather Data from Ireland's [Weather Observing Stations](https://www.met.i
 
 See also, [major weather events](https://www.met.ie/climate/major-weather-events), which in 2017 including [Storm Opelia](https://en.wikipedia.org/wiki/Hurricane_Ophelia_(2017)) (October 9, 2017 – October 18, 2017)
 
+### Examples
+In order to maximise the usefulness of the observations, R's [tidyverse](https://www.tidyverse.org) tools such as **dplyr** and **ggplot2** can be used. Here are three examples showing their use.
+
+- [Loading the data](
+https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/01%20Loading%20Dataset)
+- [Exploring a weather event: Storm Ophelia](
+https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/02%20Storm%20Ophelia)
+- [Summarising hourly rainfall into monthly values](
+https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/03%20Rainfall%20Summary)
+
 ### Author Information
 
 - Author: Jim Duggan

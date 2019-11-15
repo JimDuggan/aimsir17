@@ -39,7 +39,7 @@ observations %>%
   print(n=25)
 ```
 
-Finally, we can sum all the rainfall values for each month
+We can sum all the rainfall values for each station by each month
 ```{r,echo=T}
 observations %>% 
   group_by(station, month) %>%
@@ -48,3 +48,21 @@ observations %>%
   print(n=25)
 ```
 
+Order the months from driest to wettest
+```{r,echo=T}
+observations %>% 
+  group_by(month) %>%
+  summarise(TotalRainfall=sum(rain,na.rm = T)) %>%
+  arrange(TotalRainfall) %>%
+  print(n=12)
+```
+
+Finally, order the weather stations  from driest to wettest, with an index value where 100 is the wettest for 2017 (Newport!)
+```{r,echo=T}
+observations %>% 
+  group_by(station) %>%
+  summarise(TotalRainfall=sum(rain,na.rm = T)) %>%
+  arrange(TotalRainfall) %>%
+  mutate(Index=100*TotalRainfall/max(TotalRainfall)) %>%
+  print(n=25)
+```
