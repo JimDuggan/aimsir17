@@ -18,3 +18,6 @@ package by adding a ‘Copyright’ field to the DESCRIPTION file, and referring
 
 ## Second submssion - 28th November 2019
 The following tests were passed:
+- check() - 0 errors, 0 warnings
+- check_rhub() - Message aimsir17 0.0.1: NOTE (New Submission)
+- check_win_devel() - aimsir17 0.0.1: NOTE (New Submission)
