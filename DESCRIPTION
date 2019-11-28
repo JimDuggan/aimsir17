@@ -12,6 +12,7 @@ Description: Named after the Irish name for weather, this package contains
     In all, the data sets include observations from 25 weather stations, and also
     latitude and longitude coordinates for each weather station.
 License:  Creative Commons Attribution 4.0 International License
+Copyright: inst/COPYRIGHTS
 Depends: R (>= 2.10)
 Suggests: 
     dplyr
