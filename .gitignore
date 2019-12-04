@@ -5,7 +5,7 @@
 # Session Data files
 .RData
 
-/data-raw/prepare.R
+data-raw/prepare.R
 
 # Example code in package build process
 *-Ex.R
