@@ -1,6 +1,6 @@
 ---
 output: github_document
-title:  Example 5 - Joining the two data sets
+title:  Example 5 - Joining observations and eirgrid17
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
