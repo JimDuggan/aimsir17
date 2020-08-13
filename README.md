@@ -42,6 +42,8 @@ https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/02%20Storm%2
 https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/03%20Rainfall%20Summary)
 - [Exploring the eirgrid energy data](
 https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/04%20Energy%20Data)
+- [Joining weather and energy data](
+https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/05%20Joining%20Data)
 
 ### Author Information
 

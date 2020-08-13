@@ -1,6 +1,6 @@
 ---
 output: github_document
-title:  Example 4 - Exploring Energy Data
+title:  Example 5 - Joining the two data sets
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
