@@ -1,0 +1,56 @@
+#' EirGrid System Data Quarterly Hourly for 2017
+#'
+#'
+#' @format
+#' \describe{
+#' \item{year}{Year of observation.}
+#' \item{month}{Month of observation.}
+#' \item{day}{Day of observation.}
+#' \item{hour}{Hour of observation.}
+#' \item{minute}{Minute of observation.}
+#' \item{date}{Date and Time (utc).}
+#' \item{NIGeneration}{Northern Ireland Generation.}
+#' \item{NIDemand}{Northern Ireland Demand.}
+#' \item{NIWindAvailability}{Northern Ireland Wind Availability.}
+#' \item{NIWindGeneration}{Northern Ireland Wind Generation.}
+#' \item{IEGeneration}{Republic of Ireland Generation.}
+#' \item{IEDemand}{Republic of Ireland Demand.}
+#' \item{IEWindAvailability}{Republic of Ireland Wind Availability.}
+#' \item{NIWindGeneration}{Republic of Irekand Wind Generation.}
+#' \item{SNSP}{System Non-Synchronous Penetration) is the sum of wind + solar generation + HVDC imports as a percentage of total demand + exports}
+#' \item{Copyright}{EirGrid}
+#' \item{Licence Statement}{This data is published under a Creative Commons Attribution 4.0
+#' International (CC BY 4.0). https://creativecommons.org/licenses/by/4.0/}
+#' \item{Disclaimer}{Disclaimer: Please note that the data contained herein is indicative as it is based on raw 15-minute SCADA readings
+#'                               which have yet to be quality controlled. EirGrid as the Transmission System Operator (TSO) for Ireland
+#'                               and SONI as the TSO for Northern Ireland make no warranties or representations of any kind with respect
+#'                               of this document, including, without limitation, its quality, accuracy and completeness.
+#'                               While every effort has been made in the compilation of this report to ensure that the information
+#'                               herein is correct, the TSOs do not accept liability for any loss or damage arising from the use of this
+#'                               document or any reliance on the information it contains. Use of this document and the information it
+#'                               contains is at the user’s sole risk. In addition, the TSOs strongly recommend that any party wishing
+#'                               to make a decision based on the content of this document should consult the TSOs in advance. }
+#' \item{Modifications}{New columns added to the data for Year, Month, Day, Hour and Minute. Columns representing GMT offset removed.
+#' The column date transformed to a `POSIXct` type. Furthermore, note that:
+#' The system data in this report is is based on average 15-minute SCADA readings (MW).
+#' All figures represent net exported energy.
+#' Maximum/Minimum figures in the different jurisdictions do not necessarily occur at the same time.
+#' The maximum SNSP limit allowed on the system is 65%.
+#' SNSP may exceed this maximum limit due to wind variations.}
+#' }
+#' @source \url{http://www.eirgridgroup.com/how-the-grid-works/renewables/}
+"eirgrid17"
+
+#' @importFrom tibble tibble
+NULL
+
+
+
+
+
+
+
+
+
+
+

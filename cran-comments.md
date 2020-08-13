@@ -21,3 +21,11 @@ The following tests were passed:
 - check() - 0 errors, 0 warnings
 - check_rhub() - Message aimsir17 0.0.1: NOTE (New Submission)
 - check_win_devel() - aimsir17 0.0.1: NOTE (New Submission)
+
+## Version 0.0.2
+A new dataset was added, from eirgrid, with 15 minute observations of energy generation and demand data from the Republic of Ireland and Northern Ireland.
+
+The following tests were passed:
+- check() - 0 errors, 0 warnings
+- check_rhub() - Message: aimsir17 0.0.2: OK
+- check_win_devel() - checking CRAN incoming feasibility ... NOTE
