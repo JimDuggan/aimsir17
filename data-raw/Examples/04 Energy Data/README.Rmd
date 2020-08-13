@@ -1,0 +1,45 @@
+---
+output: github_document
+title:  Example 4 - Exploring Energy Data
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+R tools such as **dplyr** and **tidyr** can be used to summarise data (e.g. add rain observations to obtain monthly and annual cumulative amounts). The three libraries are first loaded.
+
+```{r,echo=T,message=FALSE}
+library(aimsir17)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+We can show eirgrid's energy data from 2017, which is recorded at 15 minute intervals.
+
+```{r,echo=T}
+eirgrid17
+```
+
+The variables stored for the eirgrid data include:
+
+```{r,echo=T}
+glimpse(eirgrid17)
+```
+ 
+The given energy demand for a particular day can be viewed.
+
+```{r,echo=T}
+mar17 <- filter(eirgrid17,day==17, month==3)
+ggplot(mar17,aes(x=date,y=IEDemand))+geom_point()+geom_line()
+```
+ 
+The wind power generated  for a month can be viewed (15 minute intervals)
+
+```{r,echo=T}
+mar <- filter(eirgrid17,month==3)
+ggplot(mar,aes(x=date,y=IEWindGeneration))+geom_point()+geom_line()
+```
+ 
+
