@@ -1,0 +1,51 @@
+---
+output: github_document
+title:  Example 4 - Exploring Energy Data
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+R tools such as **dplyr** and **tidyr** can be used to summarise data (e.g. add rain observations to obtain monthly and annual cumulative amounts). The three libraries are first loaded.
+
+```{r,echo=T,message=FALSE}
+library(aimsir17)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+We can link the energyu data with the weather observations to explore the link between wind speed and power generated. First, we use dplyr to get the hourly mean of wind power generated for March 2017
+
+```{r,echo=T}
+march <- eirgrid17 %>% filter(month==3) %>%
+                       group_by(year,month,day,hour) %>%
+                       summarise(AvrHourWind=mean(IEWindGeneration))
+march
+
+```
+
+Next, get the weather observations for March for two stations (Mace Head and Belmullet)
+```{r,echo=T}
+w <- observations %>% filter(month==3, station=="MACE HEAD" | station == "BELMULLET") %>% 
+                 select(station, year, month, day, hour, wdsp)
+w
+```
+
+Next, join the two tables.
+```{r,echo=T}
+j <- full_join(w, march)
+j
+```
+
+Next, summarise the merged data set
+```{r,echo=T}
+summary(j)
+```
+
+
+Finally, explore any possible relationship between average hourley wind speed and average wind power generated
+```{r,echo=T}
+ggplot(j,aes(x=wdsp,y=AvrHourWind,colour=station))+geom_point()+geom_jitter()+geom_smooth()
+```
