@@ -1,4 +1,4 @@
-Example 4 - Exploring Energy Data
+Example 5 - Joining observations and eirgrid17
 ================
 
 R tools such as **dplyr** and **tidyr** can be used to summarise data
