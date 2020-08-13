@@ -40,6 +40,8 @@ https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/01%20Loading
 https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/02%20Storm%20Ophelia)
 - [Summarising hourly rainfall into monthly values](
 https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/03%20Rainfall%20Summary)
+- [Exploring the eirgrid energy data](
+https://github.com/JimDuggan/aimsir17/tree/master/data-raw/Examples/04%20Energy%20Data)
 
 ### Author Information
 
