@@ -1,5 +1,5 @@
 ### aimsir17
-Irish Weather Data from Ireland's [Weather Observing Stations](https://www.met.ie/climate/weather-observing-stations) in 2017. It now includes energy generation data for 2017. 
+Irish Weather Data from Ireland's [Weather Observing Stations](https://www.met.ie/climate/weather-observing-stations) in 2017. It now includes energy generation data for 2017 in the tibble *eirgrid17*.
 
 Hourly records from January-December based on the following weather observation stations:
 
